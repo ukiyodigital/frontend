@@ -6,5 +6,6 @@
 .navbar-item {
     display: block;
     flex: 1;
+    padding: 0.75rem .75rem;
     text-align: center;
 }
