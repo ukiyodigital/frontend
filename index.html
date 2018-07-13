@@ -70,7 +70,7 @@
             <a class="button is-pink vertical-button-padding round-button">Learn More About Us</a>
           </div>
           <div class="column is-4">
-            <div class="card profile-card dark-blue-background has-text-centered" onclick="openKevinModal()">
+            <div class="card profile-card dark-blue-background has-text-centered" data-target="kevin-modal" onclick="openKevinModal()">
               <img src="./assets/images/Headshots/kevin.jpg" class="circle-picture image">
               <p class="has-text-weight-semibold banner-text">Kevin Cunanan</p>
               <p class="has-text-centered is-size-6 has-text-weight-light banner-text">Chief Engineer</p>
@@ -83,7 +83,7 @@
                 <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
               </p>
             </div>
-            <button class="modal-close is-large" aria-label="close" onclick="closeKevinModal()"></button>
+            <button class="modal-close is-large" aria-label="close" onclick="closeModal()"></button>
           </div>
           <div class="column is-4">
             <div class="card profile-card light-blue-background has-text-centered" onclick="openCoryModal()">
@@ -99,7 +99,7 @@
                 <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
               </p>
             </div>
-            <button class="modal-close is-large" aria-label="close" onclick="closeCoryModal()"></button>
+            <button class="modal-close is-large" aria-label="close" onclick="closeModal()"></button>
           </div>
         </div>
       </div>
@@ -124,18 +124,16 @@
         kevin.classList.add('is-active')
       }
 
-      function closeKevinModal() {
-        const modals = document.getElementById('kevin-modal')
-        modals.classList.remove('is-active')
-      }
       function openCoryModal() {
         let cory = document.querySelector('#cory-modal')
         cory.classList.add('is-active')
       }
 
-      function closeCoryModal() {
-        const modals = document.getElementById('cory-modal')
-        modals.classList.remove('is-active')
+      function closeModal() {
+        const modals = document.querySelectorAll('.modal')
+        modals.forEach(modal => {
+          modal.classList.remove('is-active')
+        })
       }
     </script>
 	</body>
