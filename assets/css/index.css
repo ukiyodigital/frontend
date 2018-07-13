@@ -1,21 +1,59 @@
-/* .navbar-item.navbar-center {
-flex-grow: 1;
-flex-direction: column;
-justify-content: center;
-} */
-
 .body {
   font-family: Helvetica;
 }
-#home {
+.transparent-box {
+  background: rgba(255, 255, 255, 0.22);
+  color: white;
+  height: 80%;
+  width: 80%;
+}
+
+.circle-picture {
+  border-radius: 50%;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  margin: 2rem 2rem 1rem 2rem;
+}
+
+.is-tea-green {
+  border-color: transparent;
+  background: rgb(195, 212, 140);
+  color: white;
+}
+
+.is-tea-green:hover {
+  border-color: transparent;
+  background: rgb(155, 170, 108);
+  color: white;
+  display: 
+}
+
+.round-button {
+  border-radius: 35px;
+}
+.calc-navbar {
+  min-height: calc(100vh - 52px)
+}
+.sky-logo-background {
     background: lightblue url(./../images/home-logo.jpg) center / cover; 
   }
   
-#who-we-are {
+.floating-lanterns-background {
   background: black url(./../images/april-pethybridge-716796-unsplash.jpg) center / cover;
 }
 
-#who-we-are-container {
+.slightly-smaller {
+  height: 10em;
+}
+
+.banner-text{
+  color: white;
+  font-size: 1.5rem;
+  line-height: 2;
+
+}
+.dark-gray-container {
   background: rgb(49,49,49);
   color: white;
   width: 90%;
@@ -23,12 +61,12 @@ justify-content: center;
 }
 
 @media only screen and (max-width : 767px) {
-  #who-we-are-container {
+  .dark-gray-container {
     width: 100%;
   }
 }
 
-#who-we-are-title {
+.white-title-with-bottom-border {
   color: white;
   padding: 2em 0 1em 0;
   width: 90%;
@@ -36,16 +74,13 @@ justify-content: center;
   border-bottom: 2px solid rgb(78, 78, 78);
 }
 
-#who-we-are-line {
-  background: rgb(78, 78, 78);
-}
-#who-we-are-columns {
+.columns-margin-1 {
   margin-top: 2.5em;
 }
 
 .transparent-bar {
-  padding: 2.55rem;
-  opacity: 0.34;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.34);
 }
 
 .main-content-paragraph {
@@ -61,10 +96,14 @@ justify-content: center;
   padding: 1.75rem;
 }
 
-.button-padding {
+.vertical-button-padding {
   margin: 2.5rem 0 0 0;
   padding: 2rem;
-  border-radius: 35px;
+}
+
+.horizontal-button-padding {
+  padding: 1.5rem;
+  margin-left: 3rem
 }
 .is-very-light-blue {
   color: rgb(128,193, 229);
@@ -98,9 +137,10 @@ justify-content: center;
   background: rgb(25,185, 199);
 }
   
-#float {
+.float-background {
   background: lightblue url(./../images/jonathan-hammond-686271-unsplash.jpg) center / cover;
 }
+
 .center {
   display: flex;
   justify-content: center;
