@@ -42,40 +42,65 @@
     <!-- /Section -->
         
     <!-- /Section -->
-    <section class="hero is-fullheight" id="home">
+    <section class="hero calc-navbar sky-logo-background slightly-smaller">
       <div class="hero-body">
         <div class="container center has-text-centered">
         </div>
       </div>
       <div class="hero-foot">
-        <div class="has-background-black transparent-bar">
-          Hello
+        <div class="transparent-bar has-text-centered">
+          <span class="banner-text has-text-weight-semibold">Content management made easy, applications made beautiful.</span> 
+          <span><a class="button is-tea-green round-button horizontal-button-padding has-text-weight-semibold">Learn More About Us</a></span>
         </div>
       </div>
     </section>
     <!-- /Section -->
 
     <!-- /Section -->
-    <section class="hero center is-large" id="who-we-are">
-      <div id="who-we-are-container">
+    <section class="hero center is-large floating-lanterns-background">
+      <div class="dark-gray-container">
         <div class="has-text-centered">
-          <h1 class="title" id="who-we-are-title">Who We Are</h1>
+          <h1 class="title white-title-with-bottom-border">Who We Are</h1>
         </div>
 
-        <div class="columns columns-padding-1-75 has-text-centered" id="who-we-are-columns">
+        <div class="columns columns-padding-1-75 has-text-centered columns-margin-1">
           <div class="column is-4">
             <p class="main-content-paragraph"><span class="is-very-light-blue is-important-text is-size-1-mobile">Ukiyo</span> is a San Fernando Valley based company founded in the summer of 2018 by brothers Kevin and Cory Cunanan. 
               Ukiyo strives to create affordable and elegant digital solutions for local businesses.
             </p>
-            <a class="button is-pink button-padding">Learn More About Us</a>
+            <a class="button is-pink vertical-button-padding round-button">Learn More About Us</a>
           </div>
           <div class="column is-4">
-            <div class="card profile-card dark-blue-background">
+            <div class="card profile-card dark-blue-background has-text-centered" onclick="openKevinModal()">
+              <img src="./assets/images/Headshots/kevin.jpg" class="circle-picture image">
+              <p class="has-text-weight-semibold banner-text">Kevin Cunanan</p>
+              <p class="has-text-centered is-size-6 has-text-weight-light banner-text">Chief Engineer</p>
             </div>
           </div>
-          <div class="column is-4">
-            <div class="card profile-card light-blue-background">
+          <div id="kevin-modal" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <p class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
+              </p>
             </div>
+            <button class="modal-close is-large" aria-label="close" onclick="closeKevinModal()"></button>
+          </div>
+          <div class="column is-4">
+            <div class="card profile-card light-blue-background has-text-centered" onclick="openCoryModal()">
+              <img src="./assets/images/Headshots/cory.jpg" class="circle-picture image">
+              <div class="has-text-centered has-text-weight-semibold banner-text">Cory Cunanan</div>
+              <div class="has-text-centered is-size-6 has-text-weight-light banner-text">Lead Designer</div>
+            </div>
+          </div>
+          <div id="cory-modal" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <p class="image is-4by3">
+                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
+              </p>
+            </div>
+            <button class="modal-close is-large" aria-label="close" onclick="closeCoryModal()"></button>
           </div>
         </div>
       </div>
@@ -83,17 +108,33 @@
     <!-- /Section -->
 
     <!-- /Section -->
-    <section class="hero is-fullheight" id="float">
+    <section class="hero is-fullheight float-background">
       <div class="hero-body">
-        <div class="container center has-text-centered">
-          <!-- <figure class="image default">
-            <img src="file:///Users/mattcunanan/Ukiyo%20Designs/UkiyoGit/assets/logos/Asset%201.png">
-          </figure> -->
+        <div class="container transparent-box">hello
         </div>
       </div>
     </section>
     <!-- /Section -->
 
+    <script>
+      function openKevinModal() {
+        let kevin = document.querySelector('#kevin-modal')
+        kevin.classList.add('is-active')
+      }
 
+      function closeKevinModal() {
+        const modals = document.getElementById('kevin-modal')
+        modals.classList.remove('is-active')
+      }
+      function openCoryModal() {
+        let cory = document.querySelector('#cory-modal')
+        cory.classList.add('is-active')
+      }
+
+      function closeCoryModal() {
+        const modals = document.getElementById('cory-modal')
+        modals.classList.remove('is-active')
+      }
+    </script>
 	</body>
 </html>
