@@ -1,11 +1,37 @@
 .body {
   font-family: Helvetica;
 }
+
 .transparent-box {
-  background: rgba(255, 255, 255, 0.22);
-  color: white;
-  height: 80%;
-  width: 80%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.34);
+}
+
+.margin-top-12 {
+  margin-top: 12;
+}
+.width-90 {
+  width: 90%;
+}
+
+.height-20 {
+  height: 20em;
+}
+
+.height-30 {
+  height: 30em;
+}
+
+.height-40 {
+  height: 40em;
+}
+
+.height-45 {
+  height: 45em;
+}
+
+.height-50 {
+  height: 50em;
 }
 
 .circle-picture {
