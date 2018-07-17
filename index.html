@@ -18,7 +18,7 @@
 
 
     <!-- Section -->			
-    <nav class="navbar is-dark ">
+    <nav class="navbar is-dark" id="navbar">
       <div class="navbar-menu">
         <div id="center-items" class="navbar-start">
           <a class="navbar-item" href="https://bulma.io/">
@@ -64,10 +64,10 @@
         </div>
         <div class="columns columns-padding-1-75 has-text-centered columns-margin-1">
           <div class="column is-4">
-            <p class="main-content-paragraph"><span class="is-very-light-blue is-important-text is-size-1-mobile">Ukiyo</span> is a San Fernando Valley based company founded in the summer of 2018 by brothers Kevin and Cory Cunanan. 
+            <p class="medium-content-paragraph"><span class="is-very-light-blue has-text-weight-bold is-important-text is-size-1-mobile">Ukiyo</span> is a San Fernando Valley based company founded in the summer of 2018 by brothers Kevin and Cory Cunanan. 
               Ukiyo strives to create affordable and elegant digital solutions for local businesses.
             </p>
-            <a class="button is-pink vertical-button-padding round-button">Learn More About Us</a>
+            <a class="button is-pink vertical-button-no-bottom-padding has-text-weight-bold round-button">Learn More About Us</a>
           </div>
           <div class="column is-4">
             <div class="card profile-card dark-blue-background has-text-centered" data-target="kevin-modal" onclick="openKevinModal()">
@@ -107,8 +107,28 @@
     <!-- /Section -->
 
     <!-- /Section -->
-    <section class="hero calc-navbar center slightly-smaller float-background">
+    <section class="hero calc-navbar slightly-smaller float-background">
+      <div class=" width-90 transparent-box">
+        <div class="columns">
+          <div class="column is-two-fifths column-light-blue center height-9">
+            <h1 class="title has-text-weight-bold is-size-1">float</h1>
+          </div>
+          <div class="column column-blue center">
+            <h1 class="title has-text-weight-semibold has-text-white has-text-left" id="float-top-right-paragraph">Make a dynamic website quickly, easily, and affordably.</h1>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column is-two-fifths column-blue has-text-centered" id="float-lower-left-column-height">
+            <p class="has-text-left has-text-white small-content-paragraph">
+              An affordable content management system  with a user-friendly interface for creating and managing APIs. 
+              Float allows you to take control of your data while removing the need for developing a backend. 
+              Float easily interfaces with our pre-made and customizable mobile-friendly templates.
+            </p>
+            <a class="button is-warm-yellow vertical-button-bottom-padding round-button has-text-weight-semibold">Visit Our Platform</a>
 
+          </div>
+        </div>
+      </div>
     </section>
     <!-- /Section -->
 
@@ -128,6 +148,19 @@
         modals.forEach(modal => {
           modal.classList.remove('is-active')
         })
+      }
+
+      window.onscroll = function() {myFunction()};
+
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
       }
     </script>
 	</body>
